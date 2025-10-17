@@ -1,0 +1,314 @@
+:root {
+  --page-bg: #e5ecef;
+  --card-bg: #ffffff;
+  --card-border: #d8dee6;
+  --text-primary: #3f3a37;
+  --text-muted: #5f666d;
+  --role-color: #c0803c;
+  --accent-primary: #b78669;
+  --accent-secondary: #e08b5a;
+  --chip-bg: #f3f6f9;
+  --icon-bg: #f6f7fb;
+  --icon-border: #d7dce5;
+  --shadow: 0 18px 38px rgba(43, 52, 67, 0.15);
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  font-family: "Poppins", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body[data-testid="test-body"] {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--page-bg);
+  padding: 3rem 1.5rem;
+  color: var(--text-primary);
+}
+
+main[data-testid="test-main"] {
+  width: min(100%, 460px);
+}
+
+article[data-testid="test-profile-card"] {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow);
+  padding: clamp(2rem, 4vw, 2.8rem) clamp(1.8rem, 4vw, 2.5rem);
+  display: grid;
+  gap: 1.75rem;
+  justify-items: center;
+  text-align: center;
+}
+
+figure[data-testid="test-avatar-figure"] {
+  margin: 0;
+}
+
+.profile-avatar-frame[data-testid="test-avatar-frame"] {
+  width: clamp(140px, 45vw, 170px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #f1dfce, #caa98c);
+  padding: 10px;
+  display: grid;
+  place-items: center;
+}
+
+img[data-testid="test-user-avatar"] {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header[data-testid="test-header"] {
+  display: grid;
+  gap: 0.4rem;
+}
+
+h1[data-testid="test-user-name"] {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 1.9rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+p[data-testid="test-user-role"] {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--role-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+section[data-testid="test-bio-section"] p[data-testid="test-user-bio"] {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+section[data-testid="test-time-section"] {
+  display: grid;
+  gap: 0.6rem;
+}
+
+h2[data-testid="test-time-heading"] {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+time[data-testid="test-user-time"] {
+  padding: 0.6rem 1.2rem;
+  background: var(--chip-bg);
+  border-radius: var(--radius-pill);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 1rem;
+  color: var(--role-color);
+}
+
+section[data-testid="test-contact-section"] {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+
+h2[data-testid="test-contact-heading"] {
+  margin: 0;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+nav[data-testid="test-social-nav"] ul[data-testid="test-user-social-links"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+nav[data-testid="test-social-nav"] li a {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+nav[data-testid="test-social-nav"] li a:hover,
+nav[data-testid="test-social-nav"] li a:focus-visible {
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.social-icon {
+  font-size: 1.1rem;
+}
+
+.social-label {
+  display: none;
+}
+
+@media (min-width: 560px) {
+}
+
+section[data-testid="test-hobbies-section"],
+section[data-testid="test-dislikes-section"] {
+  width: 100%;
+  display: grid;
+  gap: 0.9rem;
+  text-align: left;
+}
+
+h2[data-testid="test-hobbies-heading"],
+h2[data-testid="test-dislikes-heading"] {
+  margin: 0;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+ul[data-testid="test-user-hobbies"],
+ul[data-testid="test-user-dislikes"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+ul[data-testid="test-user-hobbies"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(68px, 1fr));
+  gap: 0.75rem;
+}
+
+ul[data-testid="test-user-hobbies"] li,
+ul[data-testid="test-user-dislikes"] li {
+  background: var(--chip-bg);
+  border-radius: 16px;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  box-shadow: inset 0 0 0 1px #e2e6ee;
+}
+
+ul[data-testid="test-user-hobbies"] li {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+ul[data-testid="test-user-dislikes"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+ul[data-testid="test-user-dislikes"] li {
+  width: 100%;
+}
+
+.tool-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+ul[data-testid="test-user-dislikes"] li {
+  color: var(--text-muted);
+}
+
+div[data-testid="test-button-group"] {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-button {
+  flex: 1 1 160px;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.profile-button--primary {
+  background: var(--accent-primary);
+}
+
+.profile-button--secondary {
+  background: var(--accent-secondary);
+}
+
+.profile-button:hover,
+.profile-button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(43, 52, 67, 0.2);
+  outline: none;
+}
+
+@media (min-width: 720px) {
+  article[data-testid="test-profile-card"] {
+    padding: 3rem 3.2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  div[data-testid="test-button-group"] {
+    flex-direction: column;
+  }
+
+  .profile-button {
+    width: 100%;
+  }
+}
