@@ -4,7 +4,7 @@
 A responsive, multi-page portfolio for **Aishat Adamu** featuring a hero-driven homepage, detailed about page, and contact form. The build emphasizes accessibility, clean typography, and smooth scaling from mobile to large desktop screens.
 
 ## Live Demo
-- **Netlify**: _Add URL after deployment_
+- **Netlify**: https://0-stage-frontend-hng-profile-card.netlify.app/
 - **GitHub Pages**: _Add URL if published_
 
 ## Repository
